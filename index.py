@@ -64,6 +64,24 @@ def contandoLetras():
     lblResp.configure(text =respuesta )
 
 
+    #--Convertir fecha a binario
+
+#--Retorno de días Vividos
+def conteoDias():
+    fechaString = f"{anio.get()}-{mes.get()}-{dia.get()}"
+    date_object = datetime.strptime(fechaString, '%Y-%m-%d')
+
+    today= datetime.today()
+    
+    d1 = today
+    d2 = date_object
+    result1 = abs(d1-d2).days 
+
+    respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
+
+    lblResp.configure(text = respuesta)
+
+
 
 #Creando inputs nombre, apellido, dia, mes, año 
 #input nombre 
@@ -121,3 +139,8 @@ btnFuncion4.config(padx=10, pady=10)
 btnFuncion5 = Button(miFrame, text = "Función 5")
 btnFuncion5.grid(row=8, column=0)
 btnFuncion5.config(padx=10, pady=10)
+
+
+
+raiz.mainloop()
+
