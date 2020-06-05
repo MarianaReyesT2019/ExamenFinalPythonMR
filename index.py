@@ -22,6 +22,49 @@ dia = IntVar()
 mes = IntVar()
 anio = IntVar()
 
+#--Convertir fecha a binario
+
+#--Retorno de días Vividos
+def contandoDias():
+    fechaString = f"{anio.get()}-{mes.get()}-{dia.get()}"
+    date_object = datetime.strptime(fechaString, '%Y-%m-%d')
+
+    today= datetime.today()
+    
+    d1 = today
+    d2 = date_object
+    result1 = abs(d1-d2).days 
+
+    respuesta = f"Usted nacio el {date_object} y ha vivido {result1} días."
+
+    lblResp.configure(text = respuesta)
+
+#--Conteo de Letras de Nombre / Apellido
+def contandoLetras():
+    #--concatNombApelli = f"{nombre.get()}{apellido.get()}"
+    sNombre = f"{nombre.get()}"
+    sApellido = f"{apellido.get()}"
+
+    conteoN = len(sNombre)
+    conteoA = len(sApellido)
+  
+#--Validacion Nombre
+    if conteoN % 2 == 0:
+        r1 = f"{sNombre} su Nombre es de número Par"
+    else:
+        r1 = f"{sNombre} su Nombre es de número Inpar"
+#--Validacion Apellido
+    if conteoA % 2 == 0:
+        r2 = f"{sApellido} su Apellido es de número Par."
+    else:
+        r2 = f"{sApellido} su Apellido es de número Inpar."
+
+    respuesta = f"{r1} y  {r2} "
+
+    lblResp.configure(text =respuesta )
+
+
+
 #Creando inputs nombre, apellido, dia, mes, año 
 #input nombre 
 lblnombre= Label(miFrame, text="Nombre: ")
