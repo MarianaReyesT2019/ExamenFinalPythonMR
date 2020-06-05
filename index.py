@@ -57,3 +57,12 @@ lblanio.grid(row=5, column=0)
 lblanio.config(padx=10, pady=10)
 txtanio=Entry(miFrame, textvariable =anio)
 txtanio.grid(row=5, column=1)
+
+#Bonton 1 funcion 1
+btnFuncion1 = Button(miFrame, text="Función 1")
+btnFuncion1.grid(row=6, column=0)
+btnFuncion1.config(padx=10, pady=10)
+
+btnFuncion2 = Button(miFrame, text = "Función 2", command=conteoDias)
+btnFuncion2.grid(row=6, column=1)
+btnFuncion2.config(padx=10, pady=10)
