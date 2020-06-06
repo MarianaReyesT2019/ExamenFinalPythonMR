@@ -5,7 +5,7 @@ from datetime import datetime
 
 #Inicio
 raiz = Tk()
-raiz.geometry("500x350")
+raiz.geometry("500x500")
 raiz.title("Examen Final Python Mariana Reyes")
 miFrame= Frame()
 miFrame.pack()
