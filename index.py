@@ -52,21 +52,22 @@ def contandoLetras():
     else:
         n1 = f"{sNombre} tu nombre es  Inpar"
     if conteoA % 2 == 0:
-        a2 = f"{sApellido} tu nombre es  Par."
+        a2 = f"{sApellido} tu apellido es  Par."
     else:
-        a2 = f"{sApellido} tu nombre es  Inpar."
+        a2 = f"{sApellido} tu apellido es  Inpar."
 
     respuesta = f"{n1} y  {a2} "
 
     lblResul.configure(text =respuesta )
 
 def alrevez():
-    nene=nombre.get()
+    nene=nombre,apellido.get()
     
     reve=nene[::-1]
 
 
     lblResul.configure(text =reve)
+
 
 
 #Creando inputs nombre, apellido, dia, mes, año 
