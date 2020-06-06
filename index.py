@@ -22,10 +22,20 @@ dia = IntVar()
 mes = IntVar()
 aneo = IntVar()
 
+def bina():
+    caro=bina.get()
+        dia=int(var3.get())
+        mes=int(var4.get())
+        anio=int(var5.get())
+        reuldia=format(dia, '0b' )
+        resulmes=format(mes, '0b')
+        resulanio=format(anio, '0b')
 
+lblResul.configure(texto=lblResul)
 
 #Operacion dias vividos 
 def contandoDias():
+    faro=contandoDias.get()
     fechaString = f"{aneo.get()}-{mes.get()}-{dia.get()}"
     date_object = datetime.strptime(fechaString, '%Y-%m-%d')
 
@@ -109,7 +119,7 @@ txtaneo.grid(row=5, column=1)
 
 #Botones que se utilizaran para las funciones 
 #Bonton 1 funcion 1
-btnFuncion1 = Button(miFrame, text="Funcion 1")
+btnFuncion1 = Button(miFrame, text="Funcion 1", command=bina)
 btnFuncion1.grid(row=7, column=1)
 btnFuncion1.config(padx=6, pady=6)
 #Bonton 2 funcion 2
